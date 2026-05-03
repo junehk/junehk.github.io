@@ -1,12 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JH Kim | Research</title>
+  <meta name="description" content="JH Kim's research website: metabolic neuroscience, hypothalamus, exosome, obesity, and aging." />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --accent: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --max-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 5.5rem 0 4rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-text {
+      max-width: 780px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .keywords li {
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 2.4rem 0;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1.35rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 0.65rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .methods-list,
+    .publication-list,
+    .contact-list {
+      display: grid;
+      gap: 0.9rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .methods-list li,
+    .publication-list li,
+    .contact-list li {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
+    }
+
+    .publication-list strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .publication-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .ongoing {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border: 1px solid #bfdbfe;
+      border-radius: 22px;
+      padding: 1.4rem;
+    }
+
+    footer {
+      padding: 3rem 0 4rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 4.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+  <header>
+    <div class="container nav">
+      <div class="brand">JH Kim</div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#methods">Methods</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Metabolic Neuroscience</div>
+        <h1>JH Kim</h1>
+        <p class="subtitle">Hypothalamus · Exosome · Obesity · Aging</p>
+        <p class="hero-text">
+          I study how the brain regulates systemic metabolism, focusing on hypothalamic signaling and
+          neural stem cell-derived exosomes. My research aims to uncover mechanisms linking obesity,
+          neuroinflammation, and aging, and to explore potential therapeutic strategies.
+        </p>
+        <ul class="keywords" aria-label="Research keywords">
+          <li>Hypothalamus</li>
+          <li>Exosome</li>
+          <li>Obesity</li>
+          <li>Neuroinflammation</li>
+          <li>Aging</li>
+          <li>Metabolic Regulation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-intro">
+          I am a researcher interested in the interaction between the central nervous system and
+          peripheral metabolism. My work focuses on how hypothalamic signaling contributes to metabolic
+          regulation and how its dysfunction leads to obesity, aging-related decline, and
+          neurodegenerative conditions.
+        </p>
+        <p class="section-intro">
+          Recently, I have been investigating the role of neural stem cell-derived exosomes as mediators
+          of intercellular communication, particularly in the context of metabolic homeostasis and
+          brain-body interactions.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research Themes</h2>
+        <p class="section-intro">
+          My research centers on brain-mediated control of metabolism and how this communication changes
+          in obesity and aging.
+        </p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Hypothalamic Control of Metabolism</h3>
+            <p>
+              The hypothalamus plays a central role in energy homeostasis. I study how hypothalamic
+              circuits and signaling pathways regulate feeding behavior, energy expenditure, and systemic
+              metabolic balance.
+            </p>
+          </article>
+          <article class="card">
+            <h3>NSC-Derived Exosomes in Metabolic Regulation</h3>
+            <p>
+              Neural stem cells secrete exosomes that may influence distant tissues. My research explores
+              how NSC-derived exosomes modulate metabolic processes and whether they can be leveraged as
+              therapeutic tools for obesity and aging.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Neuroinflammation and Metabolic Dysfunction</h3>
+            <p>
+              Chronic inflammation in the brain is closely linked to metabolic disease. I investigate how
+              neuroinflammatory responses contribute to obesity-induced dysfunction and aging-related
+              decline.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Aging and Brain–Body Communication</h3>
+            <p>
+              Aging alters communication between the brain and peripheral organs. My work aims to
+              understand how these changes affect systemic physiology and contribute to conditions such as
+              sarcopenia and neurodegeneration.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methods">
+      <div class="container">
+        <h2 class="section-title">Methods & Approaches</h2>
+        <ul class="methods-list">
+          <li>Mouse models of obesity and metabolic disorders</li>
+          <li>In vivo and in vitro experimental systems</li>
+          <li>Molecular biology techniques: qPCR and Western blot</li>
+          <li>Histological analysis including immunohistochemistry (IHC)</li>
+          <li>Flow cytometry (FACS)</li>
+          <li>Transcriptomic analysis including RNA-seq</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <h2 class="section-title">Featured Publications</h2>
+        <ul class="publication-list">
+          <li>
+            <strong>Paper title goes here</strong>
+            <div class="publication-meta">Journal Name, Year · Brief description of the key finding</div>
+          </li>
+          <li>
+            <strong>Paper title goes here</strong>
+            <div class="publication-meta">Journal Name, Year · Brief description of the key finding</div>
+          </li>
+          <li>
+            <strong>Paper title goes here</strong>
+            <div class="publication-meta">Journal Name, Year · Brief description of the key finding</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ongoing">
+      <div class="container">
+        <h2 class="section-title">Ongoing Work</h2>
+        <div class="ongoing">
+          Developing hypothalamic exosome-based strategies to improve metabolic dysfunction and obesity-related phenotypes.
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:your_email@domain.com">your_email@domain.com</a></li>
+          <li>GitHub: <a href="https://github.com/yourname" target="_blank" rel="noreferrer">github.com/yourname</a></li>
+          <li>Google Scholar: Add your profile link here</li>
+          <li>ORCID: Add your ORCID link here</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 JH Kim. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
