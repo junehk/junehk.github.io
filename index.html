@@ -36,10 +36,13 @@
     a {
       color: var(--accent);
       text-decoration: none;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
 
     a:hover {
       text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
     }
 
     .container {
@@ -79,6 +82,10 @@
 
     .nav-links a {
       color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
     }
 
     .hero {
@@ -157,12 +164,28 @@
       gap: 1rem;
     }
 
-    .card {
+    .card,
+    .methods-list li,
+    .publication-list li,
+    .contact-list li {
       background: var(--surface);
       border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .card:hover,
+    .methods-list li:hover,
+    .publication-list li:hover,
+    .contact-list li:hover {
+      transform: translateY(-3px);
+      border-color: #bfdbfe;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    .card {
       border-radius: 20px;
       padding: 1.35rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
     }
 
     .card h3 {
@@ -189,21 +212,70 @@
     .methods-list li,
     .publication-list li,
     .contact-list li {
-      background: var(--surface);
-      border: 1px solid var(--line);
       border-radius: 16px;
       padding: 1rem 1.1rem;
     }
 
-    .publication-list strong {
+    .publication-title {
       display: block;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.35rem;
+      color: var(--text);
       font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .publication-title:hover {
+      color: var(--accent);
+      text-decoration: none;
     }
 
     .publication-meta {
       color: var(--muted);
       font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .publication-link,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+
+    .publication-link {
+      padding: 0.42rem 0.65rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .publication-link:hover {
+      text-decoration: none;
+      background: #bfdbfe;
+    }
+
+    .me {
+      font-weight: 700;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .tag {
+      padding: 0.35rem 0.55rem;
+      background: #f1f5f9;
+      color: var(--accent);
+      font-weight: 700;
+      margin-left: 6px;
     }
 
     .ongoing {
@@ -232,13 +304,7 @@
       .hero {
         padding-top: 4.5rem;
       }
-
-      .me {
-        font-weight: 700;
-        font-style: italic;
-      }
     }
-
   </style>
 </head>
 <body>
@@ -357,24 +423,39 @@
         <h2 class="section-title">Featured Publications</h2>
         <ul class="publication-list">
           <li>
-            <strong>Vitisin B, extracted from Vitis vinifera, enhances memory function and neuroprotective effects in scopolamine-induced memory-impaired mice</strong>
+            <a class="publication-title" href="https://doi.org/10.1016/j.biopha.2026.119019" target="_blank" rel="noreferrer">
+              Vitisin B, extracted from Vitis vinifera, enhances memory function and neuroprotective effects in scopolamine-induced memory-impaired mice
+            </a>
             <div class="publication-meta">
               Kim WS, Choi J, Kim SS, <span class="me">Kim JH</span>, Han YE, Kwak MJ, Oh SJ, Lee B, Cho IH, Choi CW, Hong GS, Kim MS<br>
-              <i>Biomed Pharmacother.</i>, 2026 · Co-author
+              <i>Biomed Pharmacother.</i>, 2026 <span class="tag">Co-author</span>
+            </div>
+            <div class="publication-links">
+              <a class="publication-link" href="https://doi.org/10.1016/j.biopha.2026.119019" target="_blank" rel="noreferrer">DOI</a>
             </div>
           </li>
           <li>
-            <strong>Neuroprotective effects of Gnetin H from Paeonia lactiflora via CREB-BDNF pathway restoration in a scopolamine-induced memory deficit model</strong>
+            <a class="publication-title" href="https://doi.org/10.1016/j.ejphar.2025.178363" target="_blank" rel="noreferrer">
+              Neuroprotective effects of Gnetin H from Paeonia lactiflora via CREB-BDNF pathway restoration in a scopolamine-induced memory deficit model
+            </a>
             <div class="publication-meta">
               <span class="me">Kim JH</span>, Kim SS, Lee EH, Oh SJ, Hong GS, Lee B, Cho IH, Choi CW, Kang T, Kim MS<br>
-              <i>Eur J Pharmacol.</i>, 2025 · First-author
+              <i>Eur J Pharmacol.</i>, 2025 <span class="tag">First Author</span>
+            </div>
+            <div class="publication-links">
+              <a class="publication-link" href="https://doi.org/10.1016/j.ejphar.2025.178363" target="_blank" rel="noreferrer">DOI</a>
             </div>
           </li>
           <li>
-            <strong>Enhanced neuronal activity by suffruticosol A extracted from Paeonia lactiflora via partly BDNF signaling in scopolamine-induced memory-impaired mice</strong>
+            <a class="publication-title" href="https://doi.org/10.1038/s41598-023-38773-8" target="_blank" rel="noreferrer">
+              Enhanced neuronal activity by suffruticosol A extracted from Paeonia lactiflora via partly BDNF signaling in scopolamine-induced memory-impaired mice
+            </a>
             <div class="publication-meta">
               <span class="me">Kim JH</span>, Han YE, Oh SJ, Lee B, Kwon O, Choi CW, Kim MS<br>
-              <i>Sci Rep.</i>, 2023 · First-author
+              <i>Sci Rep.</i>, 2023 <span class="tag">First Author</span>
+            </div>
+            <div class="publication-links">
+              <a class="publication-link" href="https://doi.org/10.1038/s41598-023-38773-8" target="_blank" rel="noreferrer">DOI</a>
             </div>
           </li>
         </ul>
@@ -395,9 +476,9 @@
         <h2 class="section-title">Contact</h2>
         <ul class="contact-list">
           <li>Email: <a href="mailto:your_email@domain.com">your_email@domain.com</a></li>
-          <li>GitHub: <a href="https://github.com/junehk" target="_blank" rel="noreferrer">github.com/junehk/a></li>
+          <li>GitHub: <a href="https://github.com/junehk" target="_blank" rel="noreferrer">github.com/junehk</a></li>
           <li>Google Scholar: Add your profile link here</li>
-          <li>ORCID: <a href="https://orcid.org/0009-0001-1775-9406">0009-0001-1775-9406</a></li>
+          <li>ORCID: <a href="https://orcid.org/0009-0001-1775-9406" target="_blank" rel="noreferrer">0009-0001-1775-9406</a></li>
         </ul>
       </div>
     </section>
