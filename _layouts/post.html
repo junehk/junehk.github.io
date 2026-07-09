@@ -1,0 +1,53 @@
+---
+layout: default
+bodyClass: "page-post"
+---
+
+{% assign suf = page.slug | slice: -3, 3 %}
+{% if suf == "-en" %}
+  {% assign base_len = page.slug | size | minus: 3 %}
+  {% assign sibling_slug = page.slug | slice: 0, base_len %}
+{% else %}
+  {% assign sibling_slug = page.slug | append: "-en" %}
+{% endif %}
+{% assign sibling = nil %}
+{% for p in site.posts %}
+  {% if p.slug == sibling_slug %}{% assign sibling = p %}{% endif %}
+{% endfor %}
+{% if suf == "-en" %}
+  {% assign translation_label_en = "Read this post in Korean" %}
+  {% assign translation_label_ko = "이 글을 한국어로 읽기" %}
+{% else %}
+  {% assign translation_label_en = "Read this post in English" %}
+  {% assign translation_label_ko = "이 글을 영어로 읽기" %}
+{% endif %}
+
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <article class="post-single">
+        <div class="post-meta">
+          <span class="post-date">{{ page.date | date: "%Y-%m-%d" }}</span>
+          <span class="post-category-tag post-category-{{ page.category }}">
+            {% include category-label.html category=page.category %}
+          </span>
+        </div>
+        <h1 class="title">{{ page.title }}</h1>
+
+        {% if sibling %}
+        <a class="translation-link" href="{{ sibling.url | relative_url }}">
+          {% include i18n.html en=translation_label_en ko=translation_label_ko %}
+        </a>
+        {% endif %}
+
+        <div class="content">{{ content }}</div>
+
+        {% if page.tags and page.tags != empty %}
+        <div class="post-tags">
+          {% for tag in page.tags %}<span class="post-tag">#{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </article>
+    </div>
+  </div>
+</div>

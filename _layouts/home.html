@@ -1,0 +1,74 @@
+---
+layout: default
+bodyClass: "page-home"
+---
+
+<div class="hero">
+  <div class="container">
+    <div class="eyebrow">{% include i18n.html en="Metabolic Neuroscience" ko="대사 신경과학" %}</div>
+    <h1>{{ site.title }}</h1>
+    <p class="subtitle">{% include i18n.html en="Hypothalamus · Exosome · Obesity · Aging" ko="시상하부 · 엑소좀 · 비만 · 노화" %}</p>
+    <div class="hero-text">{{ content }}</div>
+    <ul class="keywords" aria-label="Research keywords">
+      <li>{% include i18n.html en="Hypothalamus" ko="시상하부" %}</li>
+      <li>{% include i18n.html en="Exosome" ko="엑소좀" %}</li>
+      <li>{% include i18n.html en="Obesity" ko="비만" %}</li>
+      <li>{% include i18n.html en="Neuroinflammation" ko="신경염증" %}</li>
+      <li>{% include i18n.html en="Aging" ko="노화" %}</li>
+      <li>{% include i18n.html en="Metabolic Regulation" ko="대사 조절" %}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="strip strip-grey">
+  <div class="container pt-6 pb-6 pb-md-10 pt-md-6">
+    <h2 class="section-title">{% include i18n.html en="Recent Posts" ko="최근 글" %}</h2>
+    <ul class="card-grid">
+      {% assign limit = site.home.limit_posts | default: 3 %}
+      {% assign shown = 0 %}
+      {% for post in site.posts %}
+        {% if shown >= limit %}{% break %}{% endif %}
+        {% assign suf = post.slug | slice: -3, 3 %}
+        {% unless suf == "-en" %}
+          {% include post-card.html post=post list_class="card" with_category=false %}
+          {% assign shown = shown | plus: 1 %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
+    <div class="row justify-content-center pt-6">
+      <div class="col-auto">
+        <a class="button" href="{{ "blog" | relative_url }}">{% include i18n.html en="View All Posts" ko="모든 글 보기" %}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <h2 class="section-title">{% include i18n.html en="Featured Publications" ko="대표 논문" %}</h2>
+    <ul class="publication-list">
+      {% assign limit = site.home.limit_publications | default: 3 %}
+      {% assign pubs = site.publications | sort: "weight" %}
+      {% for pub in pubs limit: limit %}
+      <li>
+        <a class="publication-title" href="{{ pub.doi }}" target="_blank" rel="noreferrer">{{ pub.title }}</a>
+        <div class="publication-meta">
+          {{ pub.authors }}<br>
+          <i>{{ pub.journal }}</i>, {{ pub.year }}
+          {% if pub.role_en %}<span class="tag">{% include i18n.html en=pub.role_en ko=pub.role_ko %}</span>{% endif %}
+        </div>
+        {% if pub.doi %}
+        <div class="publication-links">
+          <a class="publication-link" href="{{ pub.doi }}" target="_blank" rel="noreferrer">DOI</a>
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="row justify-content-center pt-6">
+      <div class="col-auto">
+        <a class="button" href="{{ "publications" | relative_url }}">{% include i18n.html en="View All Publications" ko="모든 논문 보기" %}</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+main:
+  - name_en: "Home"
+    name_ko: "홈"
+    url: "/"
+    weight: 1
+  - name_en: "Blog"
+    name_ko: "블로그"
+    url: "/blog/"
+    weight: 2
+  - name_en: "Publications"
+    name_ko: "논문"
+    url: "/publications/"
+    weight: 3
+  - name_en: "About"
+    name_ko: "소개"
+    url: "/about/"
+    weight: 4
+  - name_en: "Contact"
+    name_ko: "연락처"
+    url: "/contact/"
+    weight: 5
+
+footer:
+  - name_en: "Home"
+    name_ko: "홈"
+    url: "/"
+    weight: 1
+  - name_en: "Contact"
+    name_ko: "연락처"
+    url: "/contact/"
+    weight: 2

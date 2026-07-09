@@ -1,0 +1,39 @@
+html[data-lang="en"] .lang-ko {
+  display: none;
+}
+
+html[data-lang="ko"] .lang-en {
+  display: none;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.4em 0.75em;
+  border: 1px solid $white-offset;
+  border-radius: 999px;
+  background: $white;
+  color: $steel;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
+
+  .lang-toggle-option {
+    padding: 0.1em 0.2em;
+    color: $steel;
+
+    &.active {
+      color: $primary;
+    }
+  }
+
+  .lang-toggle-sep {
+    color: $white-offset;
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+}

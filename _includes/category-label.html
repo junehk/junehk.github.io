@@ -1,0 +1,1 @@
+{% assign cat = site.data.categories[include.category] %}{% if cat %}{% include i18n.html en=cat.en ko=cat.ko %}{% else %}{{ include.category | capitalize }}{% endif %}

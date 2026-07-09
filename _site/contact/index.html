@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.svg">
+  <script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var lang = saved;
+    if (lang !== 'en' && lang !== 'ko') {
+      var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en');
+      lang = browserLang.toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+    }
+    document.documentElement.setAttribute('data-lang', lang);
+  })();
+</script>
+
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+  
+  <meta name="description" content="Contact" />
+  <meta property="og:title" content="Contact"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content=""/>
+  
+  <meta property="og:description" content="Contact"/>
+  <meta name="twitter:card" content="summary"/>
+  
+  
+
+</head>
+
+<body class='page page-contact'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    <li class="">
+      <a href="/"><span class="lang-en">Home</span><span class="lang-ko">홈</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/blog/"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/publications/"><span class="lang-en">Publications</span><span class="lang-ko">논문</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/about/"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
+    </li>
+    
+    <li class="active">
+      <a href="/contact/"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></a>
+    </li>
+    
+  </ul>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo logo-text">
+      <a href="/">Coding Neuroscientist</a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    <li class="">
+      <a href="/"><span class="lang-en">Home</span><span class="lang-ko">홈</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/blog/"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/publications/"><span class="lang-en">Publications</span><span class="lang-ko">논문</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/about/"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
+    </li>
+    
+    <li class="active">
+      <a href="/contact/"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></a>
+    </li>
+    
+  </ul>
+</div>
+
+    <div class="header-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language / 언어 전환">
+  <span class="lang-toggle-option" data-set-lang="en">EN</span>
+  <span class="lang-toggle-sep">/</span>
+  <span class="lang-toggle-option" data-set-lang="ko">KO</span>
+</button>
+
+      <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+    </div>
+  </div>
+</div>
+
+    <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-start">
+        <div class="col-12 col-md-8">
+            <div class="service service-single">
+                <h1 class="title"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></h1>
+                <div class="content mt-4"><div class="lang-en">
+
+  <p>Feel free to reach out through either of the links below.</p>
+
+</div>
+
+<div class="lang-ko">
+
+  <p>아래 링크를 통해 편하게 연락 주세요.</p>
+
+</div>
+
+<ul class="contact-list">
+  <li>GitHub: <a href="https://github.com/junehk" target="_blank" rel="noreferrer">https://github.com/junehk</a></li>
+  <li>ResearchGate: <a href="https://www.researchgate.net/profile/June-Hee-Kim" target="_blank" rel="noreferrer">https://www.researchgate.net/profile/June-Hee-Kim</a></li>
+  <li>ORCID: <a href="https://orcid.org/0009-0001-1775-9406" target="_blank" rel="noreferrer">https://orcid.org/0009-0001-1775-9406</a></li>
+</ul>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h2 class="footer-title">Coding Neuroscientist</h2>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/"><span class="lang-en">Home</span><span class="lang-ko">홈</span></a>
+            </li>
+            
+            <li class="active">
+              <a href="/contact/"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+    <a href="https://github.com/junehk" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+  
+    <a href="https://www.researchgate.net/profile/June-Hee-Kim" target="blank"><img src="/images/social/ResearchGate.svg" title="ResearchGate" alt="ResearchGate" /></a>
+  
+    <a href="https://orcid.org/0009-0001-1775-9406" target="blank"><img src="/images/social/ORCID.svg" title="ORCID" alt="ORCID" /></a>
+  
+</div>
+
+          
+          
+          <div class="copyright">&copy; 2026 June Hee Kim.</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  <script type="text/javascript" src="/assets/js/i18n.js"></script>
+  
+  
+</body>
+</html>

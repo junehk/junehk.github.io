@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Github",
+    "link": "https://github.com/junehk",
+    "image": "images/social/github.svg"
+  },
+  {
+    "name": "ResearchGate",
+    "link": "https://www.researchgate.net/profile/June-Hee-Kim",
+    "image": "images/social/ResearchGate.svg"
+  },
+  {
+    "name": "ORCID",
+    "link": "https://orcid.org/0009-0001-1775-9406",
+    "image": "images/social/ORCID.svg"
+  }
+]

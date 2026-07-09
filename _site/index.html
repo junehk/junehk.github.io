@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Coding Neuroscientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.svg">
+  <script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    var lang = saved;
+    if (lang !== 'en' && lang !== 'ko') {
+      var browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en');
+      lang = browserLang.toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+    }
+    document.documentElement.setAttribute('data-lang', lang);
+  })();
+</script>
+
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+  
+  <meta name="description" content="JH Kim's research website: metabolic neuroscience, hypothalamus, exosome, obesity, and aging." />
+  <meta property="og:title" content="Coding Neuroscientist"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content=""/>
+  
+  <meta property="og:description" content="JH Kim's research website: metabolic neuroscience, hypothalamus, exosome, obesity, and aging."/>
+  <meta name="twitter:card" content="summary"/>
+  
+  
+
+</head>
+
+<body class='page page-home'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    <li class="active">
+      <a href="/"><span class="lang-en">Home</span><span class="lang-ko">홈</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/blog/"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/publications/"><span class="lang-en">Publications</span><span class="lang-ko">논문</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/about/"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/contact/"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></a>
+    </li>
+    
+  </ul>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo logo-text">
+      <a href="/">Coding Neuroscientist</a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    <li class="active">
+      <a href="/"><span class="lang-en">Home</span><span class="lang-ko">홈</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/blog/"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/publications/"><span class="lang-en">Publications</span><span class="lang-ko">논문</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/about/"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
+    </li>
+    
+    <li class="">
+      <a href="/contact/"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></a>
+    </li>
+    
+  </ul>
+</div>
+
+    <div class="header-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language / 언어 전환">
+  <span class="lang-toggle-option" data-set-lang="en">EN</span>
+  <span class="lang-toggle-sep">/</span>
+  <span class="lang-toggle-option" data-set-lang="ko">KO</span>
+</button>
+
+      <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+    </div>
+  </div>
+</div>
+
+    <div class="hero">
+  <div class="container">
+    <div class="eyebrow"><span class="lang-en">Metabolic Neuroscience</span><span class="lang-ko">대사 신경과학</span></div>
+    <h1>Coding Neuroscientist</h1>
+    <p class="subtitle"><span class="lang-en">Hypothalamus · Exosome · Obesity · Aging</span><span class="lang-ko">시상하부 · 엑소좀 · 비만 · 노화</span></p>
+    <div class="hero-text"><div class="lang-en">
+  <p>I study how the brain regulates systemic metabolism, focusing on hypothalamic signaling and neural stem cell-derived exosomes. My research aims to uncover mechanisms linking obesity, neuroinflammation, and aging, and to explore potential therapeutic strategies.</p>
+</div>
+
+<div class="lang-ko">
+  <p>저는 뇌가 전신 대사를 조절하는 방식, 특히 시상하부 신호전달과 신경줄기세포 유래 엑소좀에 초점을 맞춰 연구하고 있습니다. 비만, 신경염증, 노화를 연결하는 기전을 밝히고 잠재적 치료 전략을 탐구하는 것이 제 연구 목표입니다.</p>
+</div>
+</div>
+    <ul class="keywords" aria-label="Research keywords">
+      <li><span class="lang-en">Hypothalamus</span><span class="lang-ko">시상하부</span></li>
+      <li><span class="lang-en">Exosome</span><span class="lang-ko">엑소좀</span></li>
+      <li><span class="lang-en">Obesity</span><span class="lang-ko">비만</span></li>
+      <li><span class="lang-en">Neuroinflammation</span><span class="lang-ko">신경염증</span></li>
+      <li><span class="lang-en">Aging</span><span class="lang-ko">노화</span></li>
+      <li><span class="lang-en">Metabolic Regulation</span><span class="lang-ko">대사 조절</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="strip strip-grey">
+  <div class="container pt-6 pb-6 pb-md-10 pt-md-6">
+    <h2 class="section-title"><span class="lang-en">Recent Posts</span><span class="lang-ko">최근 글</span></h2>
+    <ul class="card-grid">
+      
+      
+      
+        
+        
+        
+          
+
+
+
+
+<li class="card">
+  <div class="post-meta">
+    <span class="post-date">2026-07-09</span>
+    <span class="post-category-tag post-category-coding">
+      <span class="lang-en">Coding</span><span class="lang-ko">코딩</span>
+    </span>
+  </div>
+
+  <div class="lang-ko">
+    <a class="post-title" href="/blog/starting_blog/">블로그 시작하기</a>
+    <p class="post-excerpt">시작한 개기</p>
+  </div>
+  <div class="lang-en">
+    
+    <a class="post-title" href="/blog/starting_blog-en/">Getting Started with Blogging</a>
+    <p class="post-excerpt">Motivation</p>
+    
+  </div>
+
+  
+  <div class="post-tags">
+    <span class="post-tag">#Jekyll</span><span class="post-tag">#Claude Code</span>
+  </div>
+  
+</li>
+
+          
+        
+      
+        
+        
+        
+      
+    </ul>
+    <div class="row justify-content-center pt-6">
+      <div class="col-auto">
+        <a class="button" href="/blog"><span class="lang-en">View All Posts</span><span class="lang-ko">모든 글 보기</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <h2 class="section-title"><span class="lang-en">Featured Publications</span><span class="lang-ko">대표 논문</span></h2>
+    <ul class="publication-list">
+      
+      
+      
+      <li>
+        <a class="publication-title" href="https://doi.org/10.1016/j.biopha.2026.119019" target="_blank" rel="noreferrer">Vitisin B, extracted from Vitis vinifera, enhances memory function and neuroprotective effects in scopolamine-induced memory-impaired mice</a>
+        <div class="publication-meta">
+          Kim WS, Choi J, Kim SS, <span class="me">Kim JH</span>, Han YE, Kwak MJ, Oh SJ, Lee B, Cho IH, Choi CW, Hong GS, Kim MS<br>
+          <i>Biomed Pharmacother.</i>, 2026
+          <span class="tag"><span class="lang-en">Co-author</span><span class="lang-ko">공동저자</span></span>
+        </div>
+        
+        <div class="publication-links">
+          <a class="publication-link" href="https://doi.org/10.1016/j.biopha.2026.119019" target="_blank" rel="noreferrer">DOI</a>
+        </div>
+        
+      </li>
+      
+      <li>
+        <a class="publication-title" href="https://doi.org/10.1016/j.ejphar.2025.178363" target="_blank" rel="noreferrer">Neuroprotective effects of Gnetin H from Paeonia lactiflora via CREB-BDNF pathway restoration in a scopolamine-induced memory deficit model</a>
+        <div class="publication-meta">
+          <span class="me">Kim JH</span>, Kim SS, Lee EH, Oh SJ, Hong GS, Lee B, Cho IH, Choi CW, Kang T, Kim MS<br>
+          <i>Eur J Pharmacol.</i>, 2025
+          <span class="tag"><span class="lang-en">First Author</span><span class="lang-ko">제1저자</span></span>
+        </div>
+        
+        <div class="publication-links">
+          <a class="publication-link" href="https://doi.org/10.1016/j.ejphar.2025.178363" target="_blank" rel="noreferrer">DOI</a>
+        </div>
+        
+      </li>
+      
+      <li>
+        <a class="publication-title" href="https://doi.org/10.1038/s41598-023-38773-8" target="_blank" rel="noreferrer">Enhanced neuronal activity by suffruticosol A extracted from Paeonia lactiflora via partly BDNF signaling in scopolamine-induced memory-impaired mice</a>
+        <div class="publication-meta">
+          <span class="me">Kim JH</span>, Han YE, Oh SJ, Lee B, Kwon O, Choi CW, Kim MS<br>
+          <i>Sci Rep.</i>, 2023
+          <span class="tag"><span class="lang-en">First Author</span><span class="lang-ko">제1저자</span></span>
+        </div>
+        
+        <div class="publication-links">
+          <a class="publication-link" href="https://doi.org/10.1038/s41598-023-38773-8" target="_blank" rel="noreferrer">DOI</a>
+        </div>
+        
+      </li>
+      
+    </ul>
+    <div class="row justify-content-center pt-6">
+      <div class="col-auto">
+        <a class="button" href="/publications"><span class="lang-en">View All Publications</span><span class="lang-ko">모든 논문 보기</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h2 class="footer-title">Coding Neuroscientist</h2>
+          <ul>
+            
+            
+            <li class="active">
+              <a href="/"><span class="lang-en">Home</span><span class="lang-ko">홈</span></a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/"><span class="lang-en">Contact</span><span class="lang-ko">연락처</span></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+    <a href="https://github.com/junehk" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+  
+    <a href="https://www.researchgate.net/profile/June-Hee-Kim" target="blank"><img src="/images/social/ResearchGate.svg" title="ResearchGate" alt="ResearchGate" /></a>
+  
+    <a href="https://orcid.org/0009-0001-1775-9406" target="blank"><img src="/images/social/ORCID.svg" title="ORCID" alt="ORCID" /></a>
+  
+</div>
+
+          
+          
+          <div class="copyright">&copy; 2026 June Hee Kim.</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  <script type="text/javascript" src="/assets/js/i18n.js"></script>
+  
+  
+</body>
+</html>

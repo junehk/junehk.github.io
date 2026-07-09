@@ -1,0 +1,38 @@
+baseurl: '/'
+permalink: /blog/:title/
+title: 'Coding Neuroscientist'
+description: "June Hee Kim's research website: metabolic neuroscience, hypothalamus, exosome, obesity, and aging."
+
+home:
+  limit_posts: 3
+  limit_publications: 3
+
+collections:
+  publications:
+    output: false
+    sort_by: weight
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+sass:
+  style: compressed # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-environment-variables
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md

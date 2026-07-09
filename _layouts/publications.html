@@ -1,0 +1,27 @@
+---
+layout: default
+bodyClass: "page-publications"
+---
+
+<div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+  <h1 class="page-title">{% include i18n.html en="Publications" ko="논문" %}</h1>
+
+  <ul class="publication-list">
+    {% assign pubs = site.publications | sort: "weight" %}
+    {% for pub in pubs %}
+    <li>
+      <a class="publication-title" href="{{ pub.doi }}" target="_blank" rel="noreferrer">{{ pub.title }}</a>
+      <div class="publication-meta">
+        {{ pub.authors }}<br>
+        <i>{{ pub.journal }}</i>, {{ pub.year }}
+        {% if pub.role_en %}<span class="tag">{% include i18n.html en=pub.role_en ko=pub.role_ko %}</span>{% endif %}
+      </div>
+      {% if pub.doi %}
+      <div class="publication-links">
+        <a class="publication-link" href="{{ pub.doi }}" target="_blank" rel="noreferrer">DOI</a>
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

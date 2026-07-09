@@ -1,0 +1,25 @@
+---
+layout: default
+bodyClass: "page-blog"
+---
+
+<div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+  <h1 class="page-title">{% include i18n.html en="Blog" ko="블로그" %}</h1>
+
+  {% assign categories = site.posts | map: "category" | uniq | sort %}
+  <div class="blog-filters">
+    <button type="button" class="blog-filter active" data-filter="all">{% include i18n.html en="All" ko="전체" %}</button>
+    {% for category in categories %}
+    <button type="button" class="blog-filter" data-filter="{{ category }}">{% include category-label.html category=category %}</button>
+    {% endfor %}
+  </div>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% assign suf = post.slug | slice: -3, 3 %}
+      {% unless suf == "-en" %}
+        {% include post-card.html post=post list_class="post-summary" with_category=true %}
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</div>

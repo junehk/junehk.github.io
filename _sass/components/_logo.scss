@@ -1,0 +1,20 @@
+.logo-text {
+  a {
+    font-family: $font-family-heading;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
