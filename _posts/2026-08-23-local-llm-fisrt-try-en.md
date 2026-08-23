@@ -39,7 +39,7 @@ Running conditions:
 - No KV cache quantization.
 - Pi agent
 
-I asked the models above to generate a virtual mouse body weight dataset. I instructed them to create R code and a CSV file.
+I asked the models above to generate a virtual mouse body weight dataset. The data will be used for lecturing statistical analysis coding. I instructed them to create R code and a CSV file.
 
 ```
 Make R code and csv file. 1. Mouse body weight (weighed once-a-week, for 15 weeks). 2. Chow diet group: BW starts from 20, ends in 25, median. 3. High Fat Diet group: BW starts from 20, ends in 38-40, median. The increase is logarithm, but not so heavily. n=8/group. Add fluctuation in the data. Filename: mouse_bw.r, mouse_bw.csv

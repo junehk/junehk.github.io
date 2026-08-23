@@ -39,7 +39,7 @@ lang: ko
 - KV cache Quantazation 안함.
 - Pi agent
 
-위 모델들로 가상 마우스의 몸무게 세트를 만들어달라고 했다. R코드를 만들고, CSV파일을 만들라 지시했다.
+위 모델들로 가상 마우스의 몸무게 세트를 만들어달라고 했다 (통계 코딩 교육용 가상 데이터). R코드를 만들고, CSV파일을 만들라 지시했다.
 
 ```
 Make R code and csv file. 1. Mouse body weight (weighed once-a-week, for 15 weeks). 2. Chow diet group: BW starts from 20, ends in 25, median. 3. High Fat Diet group: BW starts from 20, ends in 38-40, median. The increase is logarithm, but not so heavily. n=8/group. Add fluctuation in the data. Filename: mouse_bw.r, mouse_bw.csv
