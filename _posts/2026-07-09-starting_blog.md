@@ -3,10 +3,9 @@ title: "블로그 시작하기"
 category: coding
 tags: [Jekyll, Claude Code]
 lang: ko
-
 ---
 
-## 시작한 개기
+시작한 계기는 아래와 같다.
 
 1. 코딩, 생물학적 실험 등을 기록할 필요성이 생김
 2. 한국 내수적인 것에 국한하지 않기 위한 플랫폼이 필요함

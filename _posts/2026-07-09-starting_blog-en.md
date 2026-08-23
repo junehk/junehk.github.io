@@ -3,10 +3,9 @@ title: "Getting Started with Blogging"
 category: coding
 tags: [Jekyll, Claude Code]
 lang: en
-
 ---
 
-## Motivation
+Motivation to start blogging is as follows:
 
 1. Needed a platform to document coding experiments and biological research
 2. Wanted to reach beyond Korean audiences and regional platforms
