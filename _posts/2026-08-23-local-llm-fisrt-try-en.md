@@ -45,7 +45,9 @@ I asked the models above to generate a virtual mouse body weight dataset. I inst
 Make R code and csv file. 1. Mouse body weight (weighed once-a-week, for 15 weeks). 2. Chow diet group: BW starts from 20, ends in 25, median. 3. High Fat Diet group: BW starts from 20, ends in 38-40, median. The increase is logarithm, but not so heavily. n=8/group. Add fluctuation in the data. Filename: mouse_bw.r, mouse_bw.csv
 ```
 
-![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/posts/2026-08-23-local-llm-fisrt-try/01_pi_agent.png)
+![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/post/2026-08-23-local-llm-fisrt-try/01_pi_agent.png)
+
+
 
 > I can just **run** a 27B dense model, but it's not fast.
 
@@ -58,7 +60,7 @@ The agentic coding results are as follows.
 | Qwen3.6-35B-a3B IQ3_XXS    | 55 sec, 8.0%/64K token      | Overwhelmingly faster than the two models above, and produced the most plausible results. |
 | Qwen3.8-27B IQ3_XXS        | 6 min 5 sec, 11.6%/64K         | The heaviest computation — the Mac fan spun up hard. A slow model that generates only about 10 tokens/s for simple chatting. |
 
-![Agentic code test](/images/post/2026-08-23-local-llm-fisrt-try/01_rplot.svg)
+![Agentic code test](/images/post/2026-08-23-local-llm-fisrt-try/01_Rplot.svg)
 
 > Data Visualisation with R 4.6.1, `ggplot2 4.0.3`, `patchwork 1.3.2`
 
