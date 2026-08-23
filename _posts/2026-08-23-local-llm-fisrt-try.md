@@ -45,7 +45,7 @@ lang: ko
 Make R code and csv file. 1. Mouse body weight (weighed once-a-week, for 15 weeks). 2. Chow diet group: BW starts from 20, ends in 25, median. 3. High Fat Diet group: BW starts from 20, ends in 38-40, median. The increase is logarithm, but not so heavily. n=8/group. Add fluctuation in the data. Filename: mouse_bw.r, mouse_bw.csv
 ```
 
-![Pi agent is runnig Qwen3.8 27b iq3_xxs](/image/posts/2026-08-23-local-llm-fisrt-try/01_pi_agent.png)
+![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/posts/2026-08-23-local-llm-fisrt-try/01_pi_agent.png)
 
 > 27B dense 모델을 돌릴 수는 있으나, 속도가 빠르지 않다.
 
@@ -58,7 +58,7 @@ Agentic coding 결과는 아래와 같다.
 | Qwen3.6-35B-a3B IQ3_XXS    | 55초, 8.0%/64K token      | 앞의 두 모델에 비해 압도적으로 빠르고, 가장 그럴듯한 결과를 만들었음. |
 | Qwen3.8-27B IQ3_XXS        | 6분5초, 11.6%/64K         | 제일 맥 Fan이 강하게 돌 정도로 연산이 많음. 단순 체팅을 사용할 때 약 10token/s 정도를 생성할 정도의 느린 모델임. |
 
-![Agentic code test](/image/post/2026-08-23-local-llm-fisrt-try/01_rplot.svg)
+![Agentic code test](/images/post/2026-08-23-local-llm-fisrt-try/01_rplot.svg)
 
 > Data Visualisation with R 4.6.1, `ggplot2 4.0.3`, `patchwork 1.3.2`
 
@@ -72,7 +72,7 @@ Agentic coding 결과는 아래와 같다.
 
 `2026년에 벌어진 소련 한국 전쟁에 대해 검색하고 분석해봐`
 
-![Qwen3.8 27b model. web searching non-exsit war](/image/post/2026-08-23-local-llm-fisrt-try/02_web_search.png)
+![Qwen3.8 27b model. web searching non-exsit war](/images/post/2026-08-23-local-llm-fisrt-try/02_web_search.png)
 
 > 없는 결과를 잘 인지하고 검색을 중단한 모습을 볼 수 있다.
 
