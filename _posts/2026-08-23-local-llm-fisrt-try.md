@@ -1,12 +1,9 @@
-```markdown
 ---
 title: "Local LLM 경험하기"
-category: coding, llm
+category: coding
 tags: [LLM, Pi, Qwen, Gemma]
 lang: ko
-
 ---
-```
 
 중고로 Macbook Pro (M4 Pro 24GB RAM, Full chip)를 업어왔다. 그리고 한 참 전에 맥미니로 Local AI를 돌리는 것이 유행했었는데, 이제와서 한 번 따라해보기로 했다.
 
