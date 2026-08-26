@@ -15,6 +15,7 @@ bodyClass: "page-publications"
         {{ pub.authors }}<br>
         <i>{{ pub.journal }}</i>, {{ pub.year }}
         {% if pub.role_en %}<span class="tag">{% include i18n.html en=pub.role_en ko=pub.role_ko %}</span>{% endif %}
+        {% for tag in pub.tags %}<span class="tag">{% include i18n.html en=tag.en ko=tag.ko %}</span>{% endfor %}
       </div>
       {% if pub.doi %}
       <div class="publication-links">
