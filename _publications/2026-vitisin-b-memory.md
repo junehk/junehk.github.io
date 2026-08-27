@@ -7,7 +7,7 @@ doi: "https://doi.org/10.1016/j.biopha.2026.119019"
 role_en: "Co-author"
 role_ko: "공동저자"
 tags:
-  - en: "In vitro study"
-    ko: "인비트로 실험"
+  - en: "Cell-based study"
+    ko: "세포 기반 연구"
 weight: 1
 ---
