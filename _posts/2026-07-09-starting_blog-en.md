@@ -5,7 +5,7 @@ tags: [Jekyll, Claude Code]
 lang: en
 ---
 
-Motivation to start blogging is as follows:
+I had been meaning to start a blog for some time. I decided to launch one because I thought it would be beneficial to organize my thoughts on coding and research. My reasons for starting the blog are as follows.
 
 1. Needed a platform to document coding experiments and biological research
 2. Wanted to reach beyond Korean audiences and regional platforms
