@@ -17,6 +17,11 @@ $container-max-widths: (
 
 $grid-gutter-width: 30px;
 
+// Follow the browser's light/dark preference instead of requiring data-bs-theme
+$color-mode-type: media-query;
+$body-bg-dark: #0f172a;
+$body-color-dark: #e2e8f0;
+
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(

@@ -1,7 +1,12 @@
 ---
 ---
 
-// Colors
+// Colors — Bootstrap's own variables. Left as plain literals: Bootstrap
+// computes several internal defaults (e.g. its dark-mode link color) from
+// these at compile time, which breaks if they're replaced with var()
+// references. $color-mode-type: media-query (see _bootstrap-variables.scss)
+// already makes Bootstrap's own light/dark derivations of these follow the
+// browser preference for free.
 $primary: #1d4ed8;
 $primary-dark: #1e3a8a;
 $secondary: #dbeafe;
@@ -9,6 +14,65 @@ $black: #0f172a;
 $white: #ffffff;
 $white-offset: #e2e8f0;
 $steel: #475569;
+
+// Our own components' colors: a day value and a night value, exposed as CSS
+// custom properties so the site follows the browser's light/dark preference
+// without a manual toggle. (Separate from the Bootstrap vars above, since
+// those can't become CSS vars — see note.)
+$accent: #1d4ed8;
+$accent-night: #60a5fa;
+$accent-ink: #1e3a8a;
+$accent-ink-night: #93c5fd;
+$tint: #dbeafe;
+$tint-night: #1e3a8a;
+$ink: #0f172a;
+$ink-night: #e2e8f0;
+$paper: #ffffff;
+$paper-night: #0f172a;
+$hairline: #e2e8f0;
+$hairline-night: #334155;
+$muted: #475569;
+$muted-night: #94a3b8;
+
+$accent-hover: lighten($accent, 10%);
+$accent-hover-night: lighten($accent-night, 10%);
+$tint-active: darken($tint, 10%);
+$tint-active-night: lighten($tint-night, 10%);
+
+:root {
+  --c-accent: #{$accent};
+  --c-accent-ink: #{$accent-ink};
+  --c-tint: #{$tint};
+  --c-ink: #{$ink};
+  --c-paper: #{$paper};
+  --c-hairline: #{$hairline};
+  --c-muted: #{$muted};
+  --c-accent-hover: #{$accent-hover};
+  --c-tint-active: #{$tint-active};
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-accent: #{$accent-night};
+    --c-accent-ink: #{$accent-ink-night};
+    --c-tint: #{$tint-night};
+    --c-ink: #{$ink-night};
+    --c-paper: #{$paper-night};
+    --c-hairline: #{$hairline-night};
+    --c-muted: #{$muted-night};
+    --c-accent-hover: #{$accent-hover-night};
+    --c-tint-active: #{$tint-active-night};
+  }
+}
+
+// From here on, every component that uses these names gets the CSS custom
+// property (and therefore the dark-mode swap) for free.
+$accent: var(--c-accent);
+$accent-ink: var(--c-accent-ink);
+$tint: var(--c-tint);
+$ink: var(--c-ink);
+$paper: var(--c-paper);
+$hairline: var(--c-hairline);
+$muted: var(--c-muted);
 
 // Links
 $link-color: $primary;

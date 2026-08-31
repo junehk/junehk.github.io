@@ -1,7 +1,7 @@
 .page-title {
   font-family: $font-family-heading;
   font-size: 2rem;
-  color: $black;
+  color: $ink;
   margin-bottom: 30px;
 }
 
@@ -14,8 +14,8 @@
 }
 
 .publication-list li {
-  background: $white;
-  border: 1px solid $white-offset;
+  background: $paper;
+  border: 1px solid $hairline;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
@@ -23,7 +23,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    border-color: $secondary;
+    border-color: $tint;
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
   }
 }
@@ -31,27 +31,27 @@
 .publication-title {
   display: block;
   margin-bottom: 6px;
-  color: $black;
+  color: $ink;
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.45;
   text-decoration: none;
 
   &:hover {
-    color: $primary;
+    color: $accent;
     text-decoration: none;
   }
 }
 
 .publication-meta {
-  color: $steel;
+  color: $muted;
   font-size: 0.95rem;
   line-height: 1.55;
 
   .me {
     font-weight: 700;
     font-style: italic;
-    color: $black;
+    color: $ink;
   }
 }
 
@@ -73,21 +73,21 @@
 
 .publication-link {
   padding: 7px 10px;
-  background: $secondary;
-  color: $primary;
+  background: $tint;
+  color: $accent;
   font-weight: 600;
   text-decoration: none;
 
   &:hover {
     text-decoration: none;
-    background: darken($secondary, 10%);
+    background: var(--c-tint-active);
   }
 }
 
 .tag {
   padding: 6px 9px;
-  background: $white-offset;
-  color: $primary;
+  background: $hairline;
+  color: $accent;
   font-weight: 700;
   margin-left: 6px;
 }

@@ -7,22 +7,22 @@
 
 .blog-filter {
   padding: 8px 16px;
-  border: 1px solid $white-offset;
+  border: 1px solid $hairline;
   border-radius: 999px;
-  background: $white;
-  color: $steel;
+  background: $paper;
+  color: $muted;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
 
   &:hover {
-    border-color: $primary;
+    border-color: $accent;
   }
 
   &.active {
-    background: $primary;
-    border-color: $primary;
-    color: $white;
+    background: $accent;
+    border-color: $accent;
+    color: $paper;
   }
 }
 
@@ -35,8 +35,8 @@
 }
 
 .post-summary {
-  background: $white;
-  border: 1px solid $white-offset;
+  background: $paper;
+  border: 1px solid $hairline;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
@@ -51,15 +51,15 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
-  color: $steel;
+  color: $muted;
   font-size: 0.85rem;
 }
 
 .post-category-tag {
   padding: 4px 10px;
   border-radius: 999px;
-  background: $secondary;
-  color: $primary;
+  background: $tint;
+  color: $accent;
   font-weight: 700;
   font-size: 0.75rem;
 }
@@ -67,20 +67,20 @@
 .post-title {
   display: block;
   margin-bottom: 8px;
-  color: $black;
+  color: $ink;
   font-size: 1.15rem;
   font-weight: 700;
   text-decoration: none;
 
   &:hover {
-    color: $primary;
+    color: $accent;
     text-decoration: none;
   }
 }
 
 .post-excerpt {
   margin: 0;
-  color: $steel;
+  color: $muted;
   font-size: 0.97rem;
 }
 
@@ -93,7 +93,7 @@
 
 .post-tag {
   font-size: 0.8rem;
-  color: $steel;
+  color: $muted;
 }
 
 .translation-link {

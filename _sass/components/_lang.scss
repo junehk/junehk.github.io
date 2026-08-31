@@ -11,10 +11,10 @@ html[data-lang="ko"] .lang-en {
   align-items: center;
   gap: 0.3em;
   padding: 0.4em 0.75em;
-  border: 1px solid $white-offset;
+  border: 1px solid $hairline;
   border-radius: 999px;
-  background: $white;
-  color: $steel;
+  background: $paper;
+  color: $muted;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -22,18 +22,18 @@ html[data-lang="ko"] .lang-en {
 
   .lang-toggle-option {
     padding: 0.1em 0.2em;
-    color: $steel;
+    color: $muted;
 
     &.active {
-      color: $primary;
+      color: $accent;
     }
   }
 
   .lang-toggle-sep {
-    color: $white-offset;
+    color: $hairline;
   }
 
   &:hover {
-    border-color: $primary;
+    border-color: $accent;
   }
 }

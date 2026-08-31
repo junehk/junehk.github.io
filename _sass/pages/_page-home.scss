@@ -8,8 +8,8 @@
     display: inline-block;
     padding: 6px 14px;
     border-radius: 999px;
-    background: $secondary;
-    color: $primary;
+    background: $tint;
+    color: $accent;
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -19,7 +19,7 @@
     font-family: $font-family-heading;
     font-size: 2.6rem;
     line-height: 1.1;
-    color: $black;
+    color: $ink;
     margin: 0 0 12px;
     @include media-breakpoint-up(md) {
       font-size: 3.6rem;
@@ -28,14 +28,14 @@
 
   .subtitle {
     font-size: 1.2rem;
-    color: $steel;
+    color: $muted;
     max-width: 700px;
     margin-bottom: 20px;
   }
 
   .hero-text {
     max-width: 700px;
-    color: $steel;
+    color: $muted;
     font-size: 1.05rem;
     margin-bottom: 24px;
   }
@@ -50,10 +50,10 @@
 
     li {
       padding: 7px 14px;
-      border: 1px solid $white-offset;
+      border: 1px solid $hairline;
       border-radius: 999px;
-      background: $white;
-      color: $steel;
+      background: $paper;
+      color: $muted;
       font-size: 0.9rem;
     }
   }
@@ -62,7 +62,7 @@
 .section-title {
   font-family: $font-family-heading;
   font-size: 1.7rem;
-  color: $black;
+  color: $ink;
   margin: 0 0 24px;
 }
 
@@ -79,8 +79,8 @@
 }
 
 .card {
-  background: $white;
-  border: 1px solid $white-offset;
+  background: $paper;
+  border: 1px solid $hairline;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);

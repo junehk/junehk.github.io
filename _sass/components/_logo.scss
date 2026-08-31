@@ -3,12 +3,12 @@
     font-family: $font-family-heading;
     font-size: 1.3rem;
     font-weight: 700;
-    color: $black;
+    color: $ink;
     text-decoration: none;
 
     &:hover {
       text-decoration: none;
-      color: $primary;
+      color: $accent;
     }
   }
 }

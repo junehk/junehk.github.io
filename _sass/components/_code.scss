@@ -3,7 +3,7 @@ div.highlighter-rouge {
   margin: 20px 0;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid $white-offset;
+  border: 1px solid $hairline;
 
   .highlight {
     overflow-x: auto;
@@ -23,8 +23,8 @@ div.highlighter-rouge {
 code.highlighter-rouge {
   padding: 0.15em 0.4em;
   border-radius: 4px;
-  background: $white-offset;
-  color: $primary-dark;
+  background: $hairline;
+  color: $accent-ink;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.88em;
 }
@@ -145,4 +145,56 @@ code.highlighter-rouge {
 .highlight .gs {
   color: #24292f;
   font-weight: bold;
+}
+
+// Rouge syntax colors (github.dark theme, via `rougify style github.dark`)
+@media (prefers-color-scheme: dark) {
+  .highlight, .highlight .w {
+    color: #c9d1d9;
+    background-color: #0d1117;
+  }
+  .highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+    color: #ff7b72;
+  }
+  .highlight .gr {
+    color: #ffa198;
+  }
+  .highlight .gd {
+    color: #ffdcd7;
+    background-color: #67060c;
+  }
+  .highlight .nb, .highlight .nc, .highlight .no, .highlight .nn {
+    color: #ffa657;
+  }
+  .highlight .sr, .highlight .na, .highlight .nt {
+    color: #7ee787;
+  }
+  .highlight .gi {
+    color: #aff5b4;
+    background-color: #033a16;
+  }
+  .highlight .kc,
+  .highlight .l, .highlight .ld, .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx,
+  .highlight .sb, .highlight .bp, .highlight .ne, .highlight .nl, .highlight .py,
+  .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm,
+  .highlight .o, .highlight .ow, .highlight .gh, .highlight .gu {
+    color: #79c0ff;
+  }
+  .highlight .s, .highlight .sa, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .sx, .highlight .s1, .highlight .ss {
+    color: #a5d6ff;
+  }
+  .highlight .nd, .highlight .nf, .highlight .fm {
+    color: #d2a8ff;
+  }
+  .highlight .err {
+    color: #f0f6fc;
+    background-color: #8e1519;
+  }
+  .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs,
+  .highlight .gl, .highlight .gt {
+    color: #8b949e;
+  }
+  .highlight .ni, .highlight .si, .highlight .ge, .highlight .gs {
+    color: #c9d1d9;
+  }
 }

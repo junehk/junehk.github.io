@@ -1,12 +1,12 @@
 .strip {
-  background: white;
+  background: $paper;
   background-repeat: no-repeat;
 }
 .strip-white {
-  background-color: white;
+  background-color: $paper;
 }
 .strip-grey {
-  background-color: $white-offset;
+  background-color: $hairline;
 }
 .strip-diagonal {
   transform: skewY(5deg);
@@ -17,16 +17,16 @@
   }
 }
 .strip-primary-gradient {
-  background-image: linear-gradient(to right, $primary, $secondary);
+  background-image: linear-gradient(to right, $accent, $tint);
 }
 .strip-primary-gradient-top-bottom {
-  background-image: linear-gradient(to bottom, $primary, $secondary);
+  background-image: linear-gradient(to bottom, $accent, $tint);
 }
 .strip-primary {
-  background-color: $primary;
+  background-color: $accent;
 }
 .strip-secondary {
-  background-color: $secondary;
+  background-color: $tint;
 }
 
 .strip-diagonal-right {
