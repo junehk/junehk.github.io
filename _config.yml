@@ -1,5 +1,6 @@
 baseurl: '/'
 permalink: /blog/:title/
+future: true # KST로 작성한 '오늘 날짜' 포스트가 UTC 빌드에서 미래 날짜로 배제되는 것을 방지
 title: 'Coding Neuroscientist'
 description: "June Hee Kim's research website: metabolic neuroscience, hypothalamus, exosome, obesity, and aging."
 
