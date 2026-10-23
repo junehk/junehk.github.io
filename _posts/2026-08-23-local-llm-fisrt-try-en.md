@@ -45,7 +45,7 @@ I asked the models above to generate a virtual mouse body weight dataset. The da
 Make R code and csv file. 1. Mouse body weight (weighed once-a-week, for 15 weeks). 2. Chow diet group: BW starts from 20, ends in 25, median. 3. High Fat Diet group: BW starts from 20, ends in 38-40, median. The increase is logarithm, but not so heavily. n=8/group. Add fluctuation in the data. Filename: mouse_bw.r, mouse_bw.csv
 ```
 
-![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/post/2026-08-23-local-llm-fisrt-try/01_pi_agent.png)
+![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/post/2026-08-23-local-llm-fisrt-try/01_pi_agent.webp)
 
 
 
@@ -74,7 +74,7 @@ I deliberately asked a question that could induce hallucination and checked the 
 
 `Search for and analyze the Soviet–Korean War that took place in 2026`
 
-![Qwen3.8 27b model. web searching non-exsit war](/images/post/2026-08-23-local-llm-fisrt-try/02_web_search.png)
+![Qwen3.8 27b model. web searching non-exsit war](/images/post/2026-08-23-local-llm-fisrt-try/02_web_search.webp)
 
 > You can see it correctly recognizing that no results exist and stopping the search.
 

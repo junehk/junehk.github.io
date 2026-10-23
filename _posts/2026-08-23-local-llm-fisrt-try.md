@@ -45,7 +45,7 @@ lang: ko
 Make R code and csv file. 1. Mouse body weight (weighed once-a-week, for 15 weeks). 2. Chow diet group: BW starts from 20, ends in 25, median. 3. High Fat Diet group: BW starts from 20, ends in 38-40, median. The increase is logarithm, but not so heavily. n=8/group. Add fluctuation in the data. Filename: mouse_bw.r, mouse_bw.csv
 ```
 
-![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/post/2026-08-23-local-llm-fisrt-try/01_pi_agent.png)
+![Pi agent is runnig Qwen3.8 27b iq3_xxs](/images/post/2026-08-23-local-llm-fisrt-try/01_pi_agent.webp)
 
 > 27B dense 모델을 돌릴 수는 있으나, 속도가 빠르지 않다.
 
@@ -72,7 +72,7 @@ Agentic coding 결과는 아래와 같다.
 
 `2026년에 벌어진 소련 한국 전쟁에 대해 검색하고 분석해봐`
 
-![Qwen3.8 27b model. web searching non-exsit war](/images/post/2026-08-23-local-llm-fisrt-try/02_web_search.png)
+![Qwen3.8 27b model. web searching non-exsit war](/images/post/2026-08-23-local-llm-fisrt-try/02_web_search.webp)
 
 > 없는 결과를 잘 인지하고 검색을 중단한 모습을 볼 수 있다.
 

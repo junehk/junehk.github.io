@@ -26,6 +26,7 @@ plugins:
   - jekyll-environment-variables
 
 exclude:
+  - AGENTS.md
   - Gemfile
   - Gemfile.lock
   - node_modules

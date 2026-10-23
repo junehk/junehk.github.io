@@ -25,7 +25,7 @@ lang: ko
 
 2019년 고려대학교 안준용 교수님의 생물통계학 수업(사실은 R을 이용한 데이터 시각화 수업)을 통해 처음 코딩에 입문하면서 GitHub에 접하게 되었다. 2026년 현재까지 GitHub를 적극적으로 활용하지는 않았으나, **무료**, **코딩 친화적**, **개인 홈페이지 제공**이라는 세 가지 이점에 주목하여 이 플랫폼을 통해 개인 홈페이지를 제작하기로 결정했다.
 
-![Github Page 문서](/images/post/2026-07-09-starting_blog/Githubpage.png)
+![Github Page 문서](/images/post/2026-07-09-starting_blog/Githubpage.webp)
 
 자세한 정보는 [GitHub Pages 문서](https://docs.github.com/ko/pages)에서 확인할 수 있다.
 
@@ -35,7 +35,7 @@ lang: ko
 
 GitHub Pages는 Jekyll을 이용한 홈페이지 구축을 권장한다. 공식 설치 가이드를 따라 환경을 구성한다.
 
-![Jekyll installation](/images/post/2026-07-09-starting_blog/jekyllrb_install.png)
+![Jekyll installation](/images/post/2026-07-09-starting_blog/jekyllrb_install.webp)
 
 [macOS용 Jekyll 설치 가이드](https://jekyllrb.com/docs/installation/macos/)를 참고하여 환경을 구축했다. `jekyll`, `gem`, `bundler` 모두 설치가 완료되었다.
 
@@ -52,21 +52,21 @@ cd myblog
 bundle exec jekyll serve
 ```
 
-![Jekyll Terminal Run](/images/post/2026-07-09-starting_blog/jekyll_terminal_exec.png)
+![Jekyll Terminal Run](/images/post/2026-07-09-starting_blog/jekyll_terminal_exec.webp)
 
 브라우저에서 `http://localhost:4000`에 접속하면 초기 홈페이지를 확인할 수 있다. 종료하려면 터미널에서 `Ctrl + C`를 입력한다.
 
-![Jekyll Terminal Run](/images/post/2026-07-09-starting_blog/jekyll_initial_page.png)
+![Jekyll Terminal Run](/images/post/2026-07-09-starting_blog/jekyll_initial_page.webp)
 
 초기 테마는 비어있는 부분이 많다. 이제 커스터마이징을 위해 Claude Code를 이용하여 빌드하고, 세부 내용을 추가로 공부하기로 했다.
 
 ## Claude Code 기반 개발
 
-![Jekyll Serif Theme](/images/post/2026-07-09-starting_blog/Jekyll_serif_theme.png)
+![Jekyll Serif Theme](/images/post/2026-07-09-starting_blog/Jekyll_serif_theme.webp)
 
 선택한 테마는 [Jekyll Serif Theme](https://github.com/zerostaticthemes/jekyll-serif-theme)이다. 구성이 깔끔했다.
 
-![Previous web site](/images/post/2026-07-09-starting_blog/previous_web_page.png)
+![Previous web site](/images/post/2026-07-09-starting_blog/previous_web_page.webp)
 
 해당 테마를 활용하면서 이전에 AI를 통해 `index.html` 방식으로만 제작했던 연습용 홈페이지 구성을 통합하기로 했다.
 
@@ -90,10 +90,10 @@ Claude Code를 사용하기 전, 필요 사항을 정리했다.
 
 VSCode에서 Jekyll Serif 폴더로 이동하고, Claude Code에 요구사항을 설명했다.
 
-![vscode_claude_please_do_it](/images/post/2026-07-09-starting_blog/vscode_claude_please_do_it.png)
+![vscode_claude_please_do_it](/images/post/2026-07-09-starting_blog/vscode_claude_please_do_it.webp)
 
 몇 가지 수정사항을 거쳐 깔끔한 페이지가 완성되었다. 유지보수를 위한 파일 구조 및 블로그 글 작성 방법을 Claude Code를 통해 학습했다.
 
-![Bunch of files compared to the first index.html only system](/images/post/2026-07-09-starting_blog/file_list.png)
+![Bunch of files compared to the first index.html only system](/images/post/2026-07-09-starting_blog/file_list.webp)
 
 마지막으로 GitHub에 업로드하여 완료했다.
