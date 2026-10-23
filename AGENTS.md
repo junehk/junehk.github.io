@@ -30,6 +30,10 @@
 - 생성 확인: `_site/blog/<slug>/index.html` (+ `-en`)
 - 이미지 누락 확인:
   `grep -rhoE 'src="/images/[^"]+' _site/blog | sed 's/src="//' | sort -u | while read p; do [ -f "_site$p" ] || echo MISSING $p; done`
+- push 후 배포 확인: `gh run list --workflow jekyll.yml --limit 1` (success 여부), 라이브 사이트에서
+  `curl -s https://junehk.github.io/blog/ | grep <slug>` 및 포스트 페이지 HTTP 200 확인
+- 주의: GitHub Actions는 UTC 빌드이며 Jekyll은 기본으로 미래 날짜 포스트를 제외한다.
+  `_config.yml`의 `future: true`가 이 문제를 막고 있으므로 삭제하지 말 것 (KST 오전 9시 전 push 시 특히 중요)
 
 ## 완료 보고
 - 작업한 파일 경로 요약을 채팅에 정리
